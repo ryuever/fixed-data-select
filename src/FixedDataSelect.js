@@ -65,7 +65,7 @@ export default class FixedDataSelect {
 
     // `showIndex` should be clear after every list disappear.
     const showIndex = this.listNavigator.activeShowIndex;
-    this.listGenerator.removeClassFromItem(showIndex, 'active2');
+    this.listGenerator.removeClassFromItem(showIndex, 'active');
 
     // If `target` is `input` type; it should lose focus after list container disappear;
 
@@ -88,20 +88,22 @@ export default class FixedDataSelect {
   }
 
   itemClickHandlerWrapper(data, key) {
-    this.onItemClick(data);
-
-    if (index === key) return;
-
     const index = this.listNavigator.activeIndex;
+
+    // no need to exclude the key and index the same's condition
+    // if (index === key) return;
 
     const nextIndex = key;
 
-    this.listGenerator.removeClassFromItem(index, 'active');
-    this.listGenerator.addClassToItem(nextIndex, 'active');
+    this.listGenerator.removeClassFromItem(index, 'active2');
+    this.listGenerator.addClassToItem(nextIndex, 'active2');
     this.listGenerator.listNode.style.display = 'none';
 
+    const record = this.listGenerator.findRecordById(nextIndex);
+    this.onItemClick(data);
+
     this.cleanerOnDisappear();
-    this.listNavigator.updateIndexAfterCommit(key);
+    this.listNavigator.updateActiveIndex(key);
 
     this.updateHolderValue(data);
   }
@@ -121,8 +123,11 @@ export default class FixedDataSelect {
     });
 
     this.listNavigator.on('change', (nextIndex, index) => {
-      this.listGenerator.removeClassFromItem(index, 'active2');
-      this.listGenerator.addClassToItem(nextIndex, 'active2');
+      this.listGenerator.removeClassFromItem(index, 'active');
+      this.listGenerator.addClassToItem(nextIndex, 'active');
+
+      // only if arrow down/up will trigger updateHolderValue
+      if (nextIndex === index && nextIndex === 0) return;
 
       const nextValue = this.listGenerator.findRecordById(nextIndex);
 
@@ -130,8 +135,8 @@ export default class FixedDataSelect {
     })
 
     this.pressTodisappear && this.listNavigator.on('commit', (nextIndex, index) => {
-      this.listGenerator.removeClassFromItem(index, 'active');
-      this.listGenerator.addClassToItem(nextIndex, 'active');
+      this.listGenerator.removeClassFromItem(index, 'active2');
+      this.listGenerator.addClassToItem(nextIndex, 'active2');
       this.listGenerator.listNode.style.display = 'none';
 
       const record = this.listGenerator.findRecordById(nextIndex);
