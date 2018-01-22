@@ -10,28 +10,33 @@ import isInput from 'predicable-utilities/lib/isInput';
 import isDiv from 'predicable-utilities/lib/isDiv';
 
 const noop = () => {};
+const isFunction = (obj) => typeof obj === 'function';
 
 export default class FixedDataSelect {
   constructor(options) {
-    const opts = options || {};
+    const opts = options || Object.create(null);
 
     const {
       dataSource,
       target,
-      onPressEnter,
+      onPress,
       pressTodisappear,
-
+      displayField = '',
+      displayFilter = null,
       onItemClick,
+      itemHeight,
     } = opts;
 
     this.dataSource = dataSource;
 
     this.target = target;
 
-    this.onPressEnter = onPressEnter || noop;
+    this.onPress = onPress || noop;
     this.pressTodisappear = typeof pressTodisappear !== 'undefined' ? pressTodisappear : true;
 
     this.onItemClick = onItemClick || noop;
+    this.displayFilter = displayFilter;
+    this.itemHeight = itemHeight;
 
     this.eventer = new DOMEventer();
 
@@ -112,7 +117,7 @@ export default class FixedDataSelect {
     this.listNavigator = new ListViewNavigator({
       target: this.listGenerator.listNode,
       max: this.dataSource.length,
-      itemHeight: 39,
+      itemHeight: this.itemHeight,
     });
 
     this.listNavigator.on('change', (nextIndex, index) => {
@@ -131,7 +136,7 @@ export default class FixedDataSelect {
 
       const record = this.listGenerator.findRecordById(nextIndex);
 
-      this.onPressEnter(record);
+      this.onPress(record);
 
       this.cleanerOnDisappear();
     })
