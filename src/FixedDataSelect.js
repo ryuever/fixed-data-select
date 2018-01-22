@@ -51,11 +51,29 @@ export default class FixedDataSelect {
     if (isInput(this.target)) {
       this.eventer.listen(this.target, 'keyup', (e) => {
         // skip the arrow key.
+        e.preventDefault();
         if ([38, 40, 13].includes(e.keyCode)) return;
-        this.listGenerator.updateDataFilter((item) => new RegExp(e.target.value).test(item));
 
-        // once update data structure of show list,  show index should be update
-        this.listNavigator.resetShowIndex(this.listGenerator.filteredDataSource.length);
+        this.listGenerator.updateDataFilter((item) => {
+          const { target: { value } } = e;
+
+          if (isFunction(this.displayFilter)) {
+            return this.displayFilter(e.target.value);
+          }
+          return new RegExp(e.target.value).test(item);
+        });
+
+        if (!e.target.value) {
+          this.listNavigator.resetIndex();
+          this.listNavigator.setMaxIndex(this.listGenerator.filteredDataSource.length)
+          return true;
+        } else {
+          // once update data structure of show list,  show index should be update
+          this.listNavigator.resetShowIndex(this.listGenerator.filteredDataSource.length);
+
+          // set first item as selected
+          this.listGenerator.addClassToItem(0, 'active');
+        }
       })
     }
   }
