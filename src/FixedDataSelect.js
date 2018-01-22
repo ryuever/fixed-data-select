@@ -145,6 +145,11 @@ export default class FixedDataSelect {
     })
   }
 
+  initShowIndexOnAppear() {
+    const index = this.listNavigator.activeIndex;
+    this.listGenerator.addClassToItem(index, 'active');
+  }
+
   initEventPositionProvider() {
     this.epp = new EventPositionProvider({
       entryNodes: [
@@ -169,6 +174,8 @@ export default class FixedDataSelect {
         this.listGenerator.listNode.style.position = 'absolute';
         this.listGenerator.listNode.style.top = `${top}px`;
         this.listGenerator.listNode.style.left = `${left}px`;
+
+        this.initShowIndexOnAppear();
       }
     })
   }
