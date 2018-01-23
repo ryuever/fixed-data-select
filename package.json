@@ -1,6 +1,6 @@
 {
   "name": "fixed-data-select",
-  "version": "1.2.0-beta",
+  "version": "1.2.1-beta",
   "description": "fiexed data select with input auto-completion on the fly",
   "main": "lib/fixed-data-select.cjs.js",
   "module": "lib/fixed-data-select.es.js",
@@ -36,5 +36,6 @@
     "rollup-plugin-typescript": "^0.8.1",
     "ts-jest": "^21.2.4",
     "typescript": "^2.6.2"
-  }
+  },
+  "repository": "https://github.com/ryuever/fixed-data-select.git"
 }
