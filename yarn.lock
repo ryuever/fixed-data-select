@@ -2194,8 +2194,8 @@ levn@~0.3.0:
     type-check "~0.3.2"
 
 listview-navigator@^1.0.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/listview-navigator/-/listview-navigator-1.4.0.tgz#6fd3a1682532607c93fbf604bc6038794f543f06"
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/listview-navigator/-/listview-navigator-1.4.1.tgz#84b1571a48704182efd585078e730b4fad256460"
   dependencies:
     dom-eventer "^1.0.1"
     emitter-helper "^1.0.0"
@@ -2935,8 +2935,8 @@ sax@^1.2.1:
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
 
 scroll-controller@^1.0.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/scroll-controller/-/scroll-controller-1.1.0.tgz#1ccedc14f1f36d942a442af9bdbda8e22c87e143"
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/scroll-controller/-/scroll-controller-1.1.1.tgz#d3c7657370de9c85ed2e84fce19efe98d41e4dfc"
   dependencies:
     dom-eventer "^1.0.1"
     emitter-helper "^1.0.0"
