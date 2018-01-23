@@ -190,7 +190,17 @@ export default class FixedDataSelect {
       const { event, eventType } = stat;
 
       if (eventType === 'willDismiss') {
-        this.listGenerator.listNode.style.display = 'none';
+        this.listGenerator.listNode.classList.add('slide-out');
+
+        setTimeout(() => {
+          this.listGenerator.listNode.classList.add('slide-out-active');
+
+          setTimeout(() => {
+            this.listGenerator.listNode.style.display = 'none';
+            this.listGenerator.listNode.classList.remove('slide-out');
+            this.listGenerator.listNode.classList.remove('slide-out-active');
+          }, 300);
+        }, 17);
       }
 
       if (eventType === 'willFire') {
@@ -202,6 +212,17 @@ export default class FixedDataSelect {
         this.listGenerator.listNode.style.position = 'absolute';
         this.listGenerator.listNode.style.top = `${top}px`;
         this.listGenerator.listNode.style.left = `${left}px`;
+
+        this.listGenerator.listNode.classList.add('slide-in');
+
+        setTimeout(() => {
+          this.listGenerator.listNode.classList.add('slide-in-active');
+
+          setTimeout(() => {
+            this.listGenerator.listNode.classList.remove('slide-in');
+            this.listGenerator.listNode.classList.remove('slide-in-active');
+          }, 300);
+        }, 17);
 
         this.initShowIndexOnAppear();
       }
