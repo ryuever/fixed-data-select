@@ -1170,8 +1170,8 @@ dom-eventer@^1.0.1, dom-eventer@^1.2.0:
   resolved "https://registry.yarnpkg.com/dom-eventer/-/dom-eventer-1.2.0.tgz#8ce1682e84f2f7261ec33357420a52426d2941c7"
 
 dom-position-provider@^1.0.1:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/dom-position-provider/-/dom-position-provider-1.1.0.tgz#e3d9c9bcef1deda1f295be065584c2aadc72e18a"
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/dom-position-provider/-/dom-position-provider-1.1.1.tgz#72d474534b9226cc6be220068c8a0c055d32959c"
   dependencies:
     dom-utilities-js "^1.1.0"
     predicable-utilities "^1.0.0"
@@ -1256,8 +1256,8 @@ esutils@^2.0.2:
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.2.tgz#0abf4f1caa5bcb1f7a9d8acc6dea4faaa04bac9b"
 
 event-position-provider@^1.0.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/event-position-provider/-/event-position-provider-1.3.0.tgz#77623548ef076eafce1957bb3b7e20ecd4dd6a89"
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/event-position-provider/-/event-position-provider-1.4.1.tgz#c129e9df3997707316ecacdcc519dbfc813c523a"
   dependencies:
     dom-eventer "^1.2.0"
     emitter-helper "^1.1.0"
@@ -2155,8 +2155,8 @@ jsprim@^1.2.2:
     verror "1.10.0"
 
 key-emitter@^1.0.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/key-emitter/-/key-emitter-1.2.0.tgz#494f911e8997c8385c0a5e099db2fce8e40c0233"
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/key-emitter/-/key-emitter-1.4.1.tgz#ce1c1d0fa35bc347896ad78a7856502707677bc1"
   dependencies:
     emitter-helper "^1.1.0"
 
@@ -2194,8 +2194,8 @@ levn@~0.3.0:
     type-check "~0.3.2"
 
 listview-navigator@^1.0.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/listview-navigator/-/listview-navigator-1.2.0.tgz#f0f515d4d348125c3819addca6eb2bf8ea611662"
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/listview-navigator/-/listview-navigator-1.4.0.tgz#6fd3a1682532607c93fbf604bc6038794f543f06"
   dependencies:
     dom-eventer "^1.0.1"
     emitter-helper "^1.0.0"
@@ -2203,8 +2203,8 @@ listview-navigator@^1.0.0:
     scroll-controller "^1.0.0"
 
 listview-provider@^1.0.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/listview-provider/-/listview-provider-1.1.0.tgz#0f89151ddb2caee02a77499c70edde63dfb6f0af"
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/listview-provider/-/listview-provider-1.1.4.tgz#b04118523a73902b3172370a959f77c7617e6858"
   dependencies:
     dom-eventer "^1.0.1"
 
@@ -2853,8 +2853,8 @@ rimraf@2, rimraf@^2.5.1, rimraf@^2.6.1, rimraf@^2.6.2:
     glob "^7.0.5"
 
 rollup-multiple-entries@^1.1.1, rollup-multiple-entries@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/rollup-multiple-entries/-/rollup-multiple-entries-1.1.2.tgz#53aa38b41a59caa26a416dc87ae55237a5348c12"
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/rollup-multiple-entries/-/rollup-multiple-entries-1.2.0.tgz#b00681fd0bd9f15311b05619cfd6ef89e0b080b0"
   dependencies:
     glob "^7.1.2"
     glob-pattern-tree "^1.0.0"
@@ -2917,8 +2917,8 @@ safe-buffer@^5.0.1, safe-buffer@^5.1.1, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
 
 sane@^2.0.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/sane/-/sane-2.2.0.tgz#d6d2e2fcab00e3d283c93b912b7c3a20846f1d56"
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/sane/-/sane-2.3.0.tgz#3f3df584abf69e63d4bb74f0f8c42468e4d7d46b"
   dependencies:
     anymatch "^1.3.0"
     exec-sh "^0.2.0"
@@ -3003,8 +3003,8 @@ source-map-support@^0.4.15:
     source-map "^0.5.6"
 
 source-map-support@^0.5.0:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.1.tgz#72291517d1fd0cb9542cee6c27520884b5da1a07"
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.2.tgz#1a6297fd5b2e762b39688c7fc91233b60984f0a5"
   dependencies:
     source-map "^0.6.0"
 
