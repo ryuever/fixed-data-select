@@ -19,10 +19,10 @@ new FixedDataSelect({
   dataSource,
   itemHeight: 31,
   onPress: (record) => {
-    this.revertDataSourceFromKey(record);
+    // ...
   },
   onItemClick: (record) => {
-    this.revertDataSourceFromKey(record);
+    // ...
   },
 });
 ```

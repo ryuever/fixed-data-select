@@ -36,5 +36,6 @@
     "rollup-plugin-typescript": "^0.8.1",
     "ts-jest": "^21.2.4",
     "typescript": "^2.6.2"
-  }
+  },
+  "repository": "https://github.com/ryuever/fixed-data-select.git"
 }
